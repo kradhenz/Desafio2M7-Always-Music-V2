@@ -79,25 +79,4 @@ const deleteByEmail = async (email) => {
     }
 }
 
-if (opcion === 'add') {
-    addStudent(genero, FDN, telefono, email, pais, nombre)
-} else if (opcion === 'all') {
-    showStudents()
-} else if (opcion === 'getEmail') {
-    const email = argumento[1]
-    showByEmail(email)
-} else if (opcion === 'update') {
-    const id = argumento[1]
-    const genero = argumento[2]
-    const FDN = argumento[3]
-    const telefono = argumento[4]
-    const email = argumento[5]
-    const pais = argumento[6]
-    const nombre = argumento[7]
-    updateStudent(id, genero, FDN, telefono, email, pais, nombre)
-} else if (opcion === 'delete') {
-    const email = argumento[1]
-    deleteByEmail(email)
-}
-
 export { addStudent, showStudents, showByEmail, updateStudent, deleteByEmail };
